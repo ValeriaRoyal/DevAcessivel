@@ -1,13 +1,19 @@
+// Definição dos tipos e interfaces para os macetes de acessibilidade
+
+// Categorias disponíveis para os macetes
 export type Category = 'HTML' | 'CSS' | 'JavaScript' | 'ARIA' | 'Forms' | 'Images' | 'Navigation' | 'Semantic' | 'Color' | 'Keyboard';
 
+// Níveis de dificuldade dos macetes
 export type Difficulty = 'Beginner' | 'Intermediate' | 'Advanced';
 
+// Interface para recursos adicionais
 export interface Resource {
   title: string;
   url: string;
   type: 'article' | 'video' | 'tool' | 'documentation';
 }
 
+// Interface principal para os macetes de acessibilidade
 export interface Tip {
   id: string;               // Identificador único
   title: string;            // Título do macete
