@@ -1,7 +1,6 @@
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { ThemeContext } from '../../contexts/ThemeContext';
+import { ThemeToggle } from '../common/ThemeToggle';
 import { SkipLink } from '../common/SkipLink';
 
 const HeaderContainer = styled.header`
@@ -86,34 +85,10 @@ const NavLink = styled(Link)`
   }
 `;
 
-const ThemeButton = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--color-text);
-  padding: 0.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s;
-  
-  &:hover {
-    background-color: var(--color-background-hover);
-  }
-  
-  &:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
-  }
-`;
-
 /**
  * Componente de cabeçalho com navegação principal e controles de acessibilidade
  */
 export const Header = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  
   return (
     <>
       <SkipLink targetId="main-content" />
@@ -137,18 +112,7 @@ export const Header = () => {
               </NavItem>
             </NavList>
             
-            <ThemeButton 
-              onClick={toggleTheme}
-              aria-label={`Alternar para tema ${
-                theme === 'light' ? 'escuro' : 
-                theme === 'dark' ? 'alto contraste' : 
-                'claro'
-              }`}
-            >
-              {theme === 'light' && '🌙'}
-              {theme === 'dark' && '🌞'}
-              {theme === 'high-contrast' && '🔆'}
-            </ThemeButton>
+            <ThemeToggle />
           </Nav>
         </HeaderContent>
       </HeaderContainer>
