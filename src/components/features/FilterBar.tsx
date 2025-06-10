@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Category, Difficulty } from '../../models/interfaces/Tip';
+import { Category, Difficulty } from '../../models/interfaces';
 
 interface FilterBarProps {
   categories: Category[];

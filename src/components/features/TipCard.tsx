@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Tip } from '../../models/interfaces/Tip';
+import { Tip } from '../../models/interfaces';
 
 interface TipCardProps {
   tip: Tip;

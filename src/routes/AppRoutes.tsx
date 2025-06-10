@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { HomePage } from '../pages/HomePage';
 
 // Página temporária para demonstração
 const TempPage = ({ title }: { title: string }) => (
@@ -14,7 +15,7 @@ const TempPage = ({ title }: { title: string }) => (
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<TempPage title="Página Inicial" />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/categorias" element={<TempPage title="Categorias" />} />
       <Route path="/sobre" element={<TempPage title="Sobre" />} />
       <Route path="*" element={<TempPage title="Página não encontrada" />} />

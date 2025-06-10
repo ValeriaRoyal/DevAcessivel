@@ -3,10 +3,8 @@ import { useTips } from '../controllers/hooks/useTips';
 import { FilterBar } from '../components/features/FilterBar';
 import { TipCard } from '../components/features/TipCard';
 
-const HomeContainer = styled.main`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+const HomeContainer = styled.div`
+  width: 100%;
 `;
 
 const Hero = styled.section`
@@ -87,7 +85,7 @@ export const HomePage = () => {
   } = useTips();
   
   return (
-    <HomeContainer id="main-content">
+    <HomeContainer>
       <Hero>
         <HeroTitle>DevAcessível</HeroTitle>
         <HeroSubtitle>

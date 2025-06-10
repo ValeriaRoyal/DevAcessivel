@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { tips as initialTips } from '../../models/data/tips';
-import { Tip, Category, Difficulty } from '../../models/interfaces/Tip';
+import { Tip, Category, Difficulty } from '../../models/interfaces';
 
 interface UseTipsProps {
   initialCategory?: Category | 'all';
