@@ -4,6 +4,8 @@ import App from './App.tsx'
 // Importação do axe-core para testes de acessibilidade em desenvolvimento
 
 // Configuração do axe-core apenas em ambiente de desenvolvimento
+// Comentando temporariamente para evitar erros
+/*
 if (process.env.NODE_ENV !== 'production') {
   import('@axe-core/react').then(axe => {
     const ReactDOM = { createRoot };
@@ -13,6 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
     console.error('Erro ao carregar axe-core:', err);
   });
 }
+*/
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

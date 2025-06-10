@@ -1,4 +1,4 @@
-import { Tip } from '../interfaces/Tip';
+import { Tip, Category, Difficulty, Resource } from '../interfaces';
 
 // Dados de exemplo para os macetes de acessibilidade
 export const tips: Tip[] = [
