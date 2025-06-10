@@ -1,29 +1,17 @@
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './contexts/ThemeContext';
-import { GlobalStyles } from './styles/GlobalStyles';
-import { Header } from './components/layout/Header';
-import { Footer } from './components/layout/Footer';
-import { AppRoutes } from './routes/AppRoutes';
+import './App.css'
 
-/**
- * Componente principal da aplicação
- */
 function App() {
   return (
-    <HelmetProvider>
-      <ThemeProvider>
-        <BrowserRouter>
-          <GlobalStyles />
-          <div className="app-container">
-            <Header />
-            <AppRoutes />
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </ThemeProvider>
-    </HelmetProvider>
-  );
+    <div className="app">
+      <header>
+        <h1>DevAcessível</h1>
+        <p>Plataforma de ensino de acessibilidade web</p>
+      </header>
+      <main>
+        <p>Bem-vindo ao DevAcessível! Esta é uma versão simplificada para teste.</p>
+      </main>
+    </div>
+  )
 }
 
-export default App;
+export default App
