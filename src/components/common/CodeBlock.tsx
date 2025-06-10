@@ -17,25 +17,27 @@ const CodeBlockContainer = styled.div`
   border: 1px solid var(--color-border);
 `;
 
-const CodeHeader = styled.div<{ isGood?: boolean; isBad?: boolean }>`
+// Usando props transientes com prefixo $ para evitar warning do React
+const CodeHeader = styled.div<{ $isGood?: boolean; $isBad?: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
   background-color: ${props => 
-    props.isGood ? 'var(--color-success-bg)' : 
-    props.isBad ? 'var(--color-error-bg)' : 
+    props.$isGood ? 'var(--color-success-bg)' : 
+    props.$isBad ? 'var(--color-error-bg)' : 
     'var(--color-code-header-bg)'
   };
   border-bottom: 1px solid var(--color-border);
 `;
 
-const CodeTitle = styled.div<{ isGood?: boolean; isBad?: boolean }>`
+// Usando props transientes com prefixo $ para evitar warning do React
+const CodeTitle = styled.div<{ $isGood?: boolean; $isBad?: boolean }>`
   font-weight: 500;
   font-size: 0.875rem;
   color: ${props => 
-    props.isGood ? 'var(--color-success)' : 
-    props.isBad ? 'var(--color-error)' : 
+    props.$isGood ? 'var(--color-success)' : 
+    props.$isBad ? 'var(--color-error)' : 
     'var(--color-text)'
   };
   display: flex;
@@ -44,8 +46,8 @@ const CodeTitle = styled.div<{ isGood?: boolean; isBad?: boolean }>`
   
   &::before {
     content: ${props => 
-      props.isGood ? '"✓"' : 
-      props.isBad ? '"✗"' : 
+      props.$isGood ? '"✓"' : 
+      props.$isBad ? '"✗"' : 
       '""'
     };
   }
@@ -121,8 +123,8 @@ export const CodeBlock = ({
   
   return (
     <CodeBlockContainer>
-      <CodeHeader isGood={isGood} isBad={isBad}>
-        <CodeTitle isGood={isGood} isBad={isBad}>
+      <CodeHeader $isGood={isGood} $isBad={isBad}>
+        <CodeTitle $isGood={isGood} $isBad={isBad}>
           {displayTitle}
         </CodeTitle>
         <div style={{ position: 'relative' }}>

@@ -1,6 +1,26 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Tip } from '../../models/interfaces';
+
+// Definindo a interface Tip diretamente no componente
+interface Tip {
+  id: string;
+  title: string;
+  category: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  description: string;
+  badCode: string;
+  goodCode: string;
+  explanation: string;
+  wcagCriteria?: string[];
+  tags: string[];
+  resources?: {
+    title: string;
+    url: string;
+    type: 'article' | 'video' | 'tool' | 'documentation';
+  }[];
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 interface TipCardProps {
   tip: Tip;
@@ -69,12 +89,13 @@ const CardFooter = styled.div`
   align-items: center;
 `;
 
-const CardDifficulty = styled.span<{ difficulty: string }>`
+// Usando prop transiente com prefixo $ para evitar warning do React
+const CardDifficulty = styled.span<{ $difficulty: string }>`
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   background-color: ${props => {
-    switch (props.difficulty) {
+    switch (props.$difficulty) {
       case 'Beginner':
         return 'var(--color-success-bg)';
       case 'Intermediate':
@@ -86,7 +107,7 @@ const CardDifficulty = styled.span<{ difficulty: string }>`
     }
   }};
   color: ${props => {
-    switch (props.difficulty) {
+    switch (props.$difficulty) {
       case 'Beginner':
         return 'var(--color-success)';
       case 'Intermediate':
@@ -144,7 +165,7 @@ export const TipCard = ({ tip }: TipCardProps) => {
       </CardBody>
       
       <CardFooter>
-        <CardDifficulty difficulty={tip.difficulty}>
+        <CardDifficulty $difficulty={tip.difficulty}>
           {difficultyMap[tip.difficulty as keyof typeof difficultyMap]}
         </CardDifficulty>
       </CardFooter>

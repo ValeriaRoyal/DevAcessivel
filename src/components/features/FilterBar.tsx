@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Category, Difficulty } from '../../models/interfaces';
+
+// Definindo os tipos diretamente no componente
+type Category = 'HTML' | 'CSS' | 'JavaScript' | 'ARIA' | 'Forms' | 'Images' | 'Navigation' | 'Semantic' | 'Color' | 'Keyboard';
+type Difficulty = 'Beginner' | 'Intermediate' | 'Advanced';
 
 interface FilterBarProps {
   categories: Category[];

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink as RouterNavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { ThemeToggle } from '../common/ThemeToggle';
 import { SkipLink } from '../common/SkipLink';
@@ -63,7 +63,7 @@ const NavItem = styled.li`
   font-size: 1rem;
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(RouterNavLink)`
   color: var(--color-text);
   text-decoration: none;
   padding: 0.5rem;
@@ -102,7 +102,7 @@ export const Header = () => {
           <Nav aria-label="Navegação principal">
             <NavList>
               <NavItem>
-                <NavLink to="/">Início</NavLink>
+                <NavLink to="/" end>Início</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/categorias">Categorias</NavLink>
