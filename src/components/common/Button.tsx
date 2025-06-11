@@ -1,5 +1,6 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import styled from 'styled-components';
+import { forwardRef } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -8,6 +9,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
   icon?: ReactNode;
   iconPosition?: 'left' | 'right';
+  as?: any; // Adicionando propriedade 'as' para permitir polimorfismo
+  to?: string; // Para uso com Link do react-router
+  href?: string; // Para uso com elementos <a>
 }
 
 const StyledButton = styled.button<Omit<ButtonProps, 'children'>>`
@@ -103,25 +107,28 @@ const StyledButton = styled.button<Omit<ButtonProps, 'children'>>`
 /**
  * Componente de botão acessível
  */
-export const Button = ({
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   children,
   variant = 'primary',
   size = 'medium',
   fullWidth = false,
   icon,
   iconPosition = 'left',
+  as: Component = 'button',
   ...props
-}: ButtonProps) => {
+}: ButtonProps, ref) => {
   return (
     <StyledButton
+      as={Component}
       variant={variant}
       size={size}
       fullWidth={fullWidth}
       iconPosition={iconPosition}
+      ref={ref}
       {...props}
     >
       {icon && icon}
       {children}
     </StyledButton>
   );
-};
+});

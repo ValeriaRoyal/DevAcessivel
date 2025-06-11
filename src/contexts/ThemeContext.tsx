@@ -1,4 +1,5 @@
-import { createContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 
 // Tipos de tema disponíveis
 type Theme = 'light' | 'dark' | 'high-contrast';

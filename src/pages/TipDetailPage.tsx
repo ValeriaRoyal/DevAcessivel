@@ -205,7 +205,7 @@ const ErrorMessage = styled.div`
 export const TipDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { tips, loading, error, getTipById } = useTips();
+  const { loading, error, getTipById } = useTips();
   
   const tip = id ? getTipById(id) : undefined;
   
