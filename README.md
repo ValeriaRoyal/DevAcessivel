@@ -115,7 +115,7 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para d
 
 ## 📬 Contato
 
-Valéria Regina - [valeriaregina.dev@gmail.com](mailto:valeriaregina.dev@gmail.com)
+Valéria Regina - [valeriaroyal.contato@gmail.com](mailto:valeriaroyal.contato@gmail.com)
 
 Link do Projeto: [https://github.com/ValeriaRoyal/DevAcessivel](https://github.com/ValeriaRoyal/DevAcessivel)
 
