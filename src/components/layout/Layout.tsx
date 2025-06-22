@@ -109,6 +109,7 @@ const Footer = styled.footer`
   background-color: var(--color-background-alt);
   padding: 1.5rem 0;
   margin-top: 2rem;
+  text-align: center;
 `;
 
 const FooterContent = styled.div`
@@ -118,6 +119,11 @@ const FooterContent = styled.div`
   text-align: center;
   color: var(--color-text-secondary);
   font-size: 0.875rem;
+  
+  p {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
 `;
 
 const AccessibilityMenu = styled.div`
