@@ -38,8 +38,6 @@ export const ThemeToggle = () => {
       case 'light':
         return '🌙'; // Lua para mudar para tema escuro
       case 'dark':
-        return '🔆'; // Sol com raios para mudar para alto contraste
-      case 'high-contrast':
         return '☀️'; // Sol para mudar para tema claro
       default:
         return '🌙';
@@ -51,8 +49,6 @@ export const ThemeToggle = () => {
       case 'light':
         return 'escuro';
       case 'dark':
-        return 'alto contraste';
-      case 'high-contrast':
         return 'claro';
       default:
         return 'escuro';
