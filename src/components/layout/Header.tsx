@@ -41,6 +41,11 @@ const Logo = styled(Link)`
   }
 `;
 
+const LogoIcon = styled.img`
+  width: 24px;
+  height: 24px;
+`;
+
 const Nav = styled.nav`
   display: flex;
   align-items: center;
@@ -95,7 +100,11 @@ export const Header = () => {
       <HeaderContainer>
         <HeaderContent>
           <Logo to="/">
-            <span aria-hidden="true">🌐</span>
+            <LogoIcon 
+              src="/acessibilidade_estilizado.svg" 
+              alt="" 
+              aria-hidden="true" 
+            />
             <span>DevAcessível</span>
           </Logo>
           
