@@ -69,7 +69,6 @@ const NavLink = styled(Link)`
 const AccessibilityButton = styled.button`
   background: none;
   border: none;
-  color: white;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -81,9 +80,11 @@ const AccessibilityButton = styled.button`
   transition: all 0.2s ease;
   position: relative;
   padding: 0;
+  opacity: 0.9;
   
   &:hover, &:focus {
     transform: scale(1.1);
+    opacity: 1;
   }
   
   &:focus-visible {
@@ -289,7 +290,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               aria-controls="accessibility-menu"
             >
               <img 
-                src="/acessibilidade_estilizado.svg" 
+                src="/acessibilidade_sem_contraste.svg" 
                 alt="" 
                 width="24" 
                 height="24" 
