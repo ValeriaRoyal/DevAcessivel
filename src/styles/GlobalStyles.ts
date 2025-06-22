@@ -25,6 +25,12 @@ export const GlobalStyles = createGlobalStyle`
     --color-warning-bg: #fff3cd;
     --color-error: #dc3545;
     --color-error-bg: #f8d7da;
+    
+    /* Variáveis de tipografia */
+    --font-family-base: 'Atkinson Hyperlegible', sans-serif;
+    --font-family-code: 'Fira Code', monospace;
+    --line-height-base: 1.6;
+    --letter-spacing: 0.01em;
   }
   
   /* Tema escuro */
@@ -86,18 +92,23 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   html {
-    font-size: 16px;
+    font-size: 18px; /* Aumentado para melhor legibilidade */
     scroll-behavior: smooth;
   }
   
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--font-family-base);
     background-color: var(--color-background);
     color: var(--color-text);
-    line-height: 1.5;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing);
     transition: background-color 0.3s, color 0.3s;
     min-height: 100vh;
+  }
+  
+  /* Melhorias para legibilidade de texto */
+  p, li, a, button, input, textarea {
+    max-width: 70ch; /* Limita a largura do texto para melhor legibilidade */
   }
   
   /* Classe para elementos visualmente escondidos mas acessíveis para leitores de tela */
@@ -119,8 +130,8 @@ export const GlobalStyles = createGlobalStyle`
   input:focus-visible,
   select:focus-visible,
   textarea:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
+    outline: 3px solid var(--color-focus); /* Aumentado para melhor visibilidade */
+    outline-offset: 3px;
   }
   
   /* Remover aparência padrão de botões em iOS */
@@ -135,7 +146,7 @@ export const GlobalStyles = createGlobalStyle`
   /* Melhorar legibilidade de texto em telas pequenas */
   @media (max-width: 768px) {
     html {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   
@@ -159,5 +170,10 @@ export const GlobalStyles = createGlobalStyle`
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+  }
+  
+  /* Estilos específicos para código */
+  code, pre {
+    font-family: var(--font-family-code);
   }
 `;

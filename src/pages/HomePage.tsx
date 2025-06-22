@@ -14,8 +14,9 @@ const Hero = styled.section`
 
 const HeroTitle = styled.h1`
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   color: var(--color-text);
+  line-height: 1.3;
   
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -27,9 +28,10 @@ const HeroSubtitle = styled.p`
   color: var(--color-text-secondary);
   max-width: 800px;
   margin: 0 auto;
+  line-height: 1.6;
   
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 `;
 

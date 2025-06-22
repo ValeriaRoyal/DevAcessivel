@@ -38,6 +38,7 @@ const TipTitle = styled.h1`
   font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--color-text);
+  line-height: 1.3;
 `;
 
 const TipMeta = styled.div`
@@ -64,6 +65,7 @@ const TipDescription = styled.p`
   line-height: 1.6;
   margin-bottom: 2rem;
   color: var(--color-text);
+  max-width: 70ch;
 `;
 
 const TipSection = styled.section`
@@ -80,18 +82,19 @@ const TipExplanation = styled.div`
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-text);
+  max-width: 70ch;
   
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
   
   ul, ol {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     padding-left: 1.5rem;
   }
   
   li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
   }
 `;
 

@@ -65,7 +65,8 @@ const CardCategory = styled.div`
 const CardTitle = styled.h3`
   margin: 0;
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.3;
 `;
 
 const CardBody = styled.div`
@@ -74,12 +75,13 @@ const CardBody = styled.div`
 
 const CardDescription = styled.p`
   margin: 0 0 1rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--color-text-secondary);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-height: 1.5;
 `;
 
 const CardFooter = styled.div`
