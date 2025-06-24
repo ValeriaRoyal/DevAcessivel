@@ -1,3 +1,5 @@
 {
-  "buildCommand": "npm run build-vercel"
+  "buildCommand": "npm run build-vercel",
+  "framework": "vite",
+  "ignoreCommand": "exit 0"
 }
