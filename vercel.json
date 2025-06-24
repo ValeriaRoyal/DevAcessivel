@@ -1,5 +1,10 @@
 {
-  "buildCommand": "npm run build-vercel",
+  "buildCommand": "vite build",
   "framework": "vite",
-  "ignoreCommand": "exit 0"
+  "git": {
+    "deploymentEnabled": {
+      "main": false,
+      "deploy-temp": true
+    }
+  }
 }
