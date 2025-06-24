@@ -120,10 +120,14 @@ const FooterContent = styled.div`
   text-align: center;
   color: var(--color-text-secondary);
   font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
   p {
     margin: 0.5rem 0;
     text-align: center;
+    max-width: 100%; /* Sobrescreve o limite de largura global */
   }
 `;
 
