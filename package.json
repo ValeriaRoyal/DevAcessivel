@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b --noEmit && vite build",
-    "build-vercel": "vite build",
+    "build-vercel": "node vercel-build.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
