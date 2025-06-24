@@ -33,6 +33,21 @@ A plataforma foi desenvolvida seguindo rigorosamente os princípios de acessibil
 - **React Helmet Async** - Gerenciamento de SEO e metadados
 - **Axe-core** - Ferramentas de acessibilidade
 - **Vite** - Build tool e dev server
+- **Atkinson Hyperlegible** - Fonte otimizada para acessibilidade
+
+## ♿ Recursos de Acessibilidade
+
+O projeto implementa diversas funcionalidades de acessibilidade:
+
+- **Fonte Atkinson Hyperlegible** - Desenvolvida pela Braille Institute especificamente para melhorar a legibilidade
+- **Alternância de temas** - Opções de tema claro e escuro
+- **Menu de acessibilidade** - Acesso rápido a configurações de acessibilidade
+- **Alto contraste** - Modo de alto contraste para usuários com baixa visão
+- **Ajuste de tamanho de texto** - Opções para aumentar ou diminuir o tamanho do texto
+- **Navegação por teclado** - Suporte completo para navegação sem mouse
+- **Landmarks semânticos** - Estrutura HTML semântica para leitores de tela
+- **Atributos ARIA** - Implementação correta de roles, states e properties
+- **Anúncios para leitores de tela** - Notificações sobre mudanças de estado
 
 ## 📁 Estrutura do Projeto
 
@@ -56,6 +71,7 @@ src/
 ├── styles/                 # Estilos globais
 ├── utils/                  # Funções utilitárias
 ├── contexts/               # Contextos React
+├── design-system/          # Sistema de design com tokens e componentes
 ├── App.tsx                 # Componente principal
 └── main.tsx                # Ponto de entrada
 ```
@@ -122,6 +138,16 @@ src/
 - [ ] Configurar testes automatizados de acessibilidade com axe-core
 - [ ] Integrar com backend para armazenamento de dados e perfis de usuário
 - [ ] Desenvolver aplicativo móvel complementar
+
+## 🧪 Testes de Acessibilidade
+
+O projeto é regularmente testado com as seguintes ferramentas:
+
+- **axe DevTools** - Para verificação automática de problemas de acessibilidade
+- **Lighthouse** - Para análise de performance e acessibilidade
+- **NVDA e VoiceOver** - Para testes com leitores de tela
+- **Navegação por teclado** - Para garantir que todas as funcionalidades sejam acessíveis sem mouse
+- **Simuladores de daltonismo** - Para testar a percepção de cores
 
 ## 🤝 Contribuição
 
