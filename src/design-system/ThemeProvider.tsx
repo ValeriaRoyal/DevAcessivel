@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { ThemeProvider as StyledThemeProvider, createGlobalStyle } from 'styled-components';
 import { theme as defaultTheme } from './tokens';
-import { animations, colors } from './tokens';
+import { animations } from './tokens';
 
 // Tipos de tema disponíveis
 export type ThemeMode = 'light' | 'dark' | 'high-contrast';
